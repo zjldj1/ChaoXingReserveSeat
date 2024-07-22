@@ -50,6 +50,7 @@ def main(users, action=False):
     current_time = get_current_time(action)
     logging.info(f"start time {current_time}, action {'on' if action else 'off'}")
     attempt_times = 0
+    usernames, passwords = None, None
     if action:
         usernames, passwords = get_user_credentials(action)
     success_list = None
